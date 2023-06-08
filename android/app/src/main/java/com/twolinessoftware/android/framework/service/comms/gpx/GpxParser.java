@@ -54,5 +54,4 @@ public class GpxParser extends Parser {
 				listener.onGpxError(re.getMessage());
 		}
 	}
-
 }

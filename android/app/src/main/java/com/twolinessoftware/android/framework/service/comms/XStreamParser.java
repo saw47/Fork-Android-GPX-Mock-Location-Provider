@@ -16,7 +16,7 @@
 package com.twolinessoftware.android.framework.service.comms;
 
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.alias.CannotResolveClassException;
+import com.thoughtworks.xstream.mapper.CannotResolveClassException;
 import com.thoughtworks.xstream.mapper.MapperWrapper;
 
 public class XStreamParser {
@@ -26,7 +26,6 @@ public class XStreamParser {
 		XStream xstream = new XStream() {
 			protected MapperWrapper wrapMapper(MapperWrapper next) {
 				return new MapperWrapper(next) {
-					@SuppressWarnings("unchecked")
 					public boolean shouldSerializeMember(Class definedIn,
 							String fieldName) {
 						try {
